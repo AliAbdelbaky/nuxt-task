@@ -11,5 +11,17 @@ export const mutations = {
     state.card = CardService
   }
 }
-export const actions = {}
+export const actions = {
+  fetchCards({
+    commit
+  }) {
+    CardService.getCards().then(({
+      data
+    }) => {
+      console.log(data)
+      commit('SET_CARDS', data)
+      return data
+    })
+  }
+}
 export const getters = {}
