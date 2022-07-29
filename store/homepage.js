@@ -1,9 +1,13 @@
 import CardService from "~/services/CardService";
 export const state = () => ({
   cards: [],
-  card: {}
+  card: {},
+  loading: true
 })
 export const mutations = {
+  SET_LOADING(state, payload) {
+    state.loading = payload
+  },
   SET_CARDS(state, payload) {
     state.cards = payload
   },
@@ -13,14 +17,13 @@ export const mutations = {
 }
 export const actions = {
   fetchCards({
-    commit
+    commit,
   }) {
-    CardService.getCards().then(({
+    return CardService.getCards().then(({
       data
     }) => {
-      console.log(data)
       commit('SET_CARDS', data)
-      return data
+      commit('SET_LOADING', false)
     })
   }
 }

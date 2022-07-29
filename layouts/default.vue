@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <v-app>
     <Navbar />
-    <Nuxt />
-  </div>
+    <v-app app>
+      <v-main>
+        <Nuxt />
+      </v-main>
+    </v-app>
+  </v-app>
 </template>
 <script>
 export default {

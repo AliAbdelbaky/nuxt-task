@@ -1,29 +1,16 @@
 <template>
-  <a-layout-header :style="{ position: 'sticky', zIndex: 1, width: '100%' }">
-    <div class="logo" />
-    <a-menu
-      v-model="selectedKeys"
-      theme="dark"
-      mode="horizontal"
-      :style="{ lineHeight: '64px' }"
-    >
-      <a-menu-item key="1"
-        ><nuxt-link :to="{ name: 'index' }">homepage</nuxt-link></a-menu-item
-      >
-      <a-menu-item key="2"
-        ><nuxt-link :to="{ name: 'about' }">about us</nuxt-link></a-menu-item
-      >
-    </a-menu>
-  </a-layout-header>
+  <v-app-bar class="uppercase" app color="white">
+    <v-toolbar-title>Title</v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+    <nuxt-link class=" mr-4 font-bold text-black" :to="{ name: 'index' }">homepage</nuxt-link>
+
+    <nuxt-link class="font-bold text-black" :to="{ name: 'about' }">about us</nuxt-link>
+  </v-app-bar>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      selectedKeys: ['2'],
-    }
-  },
-}
+export default {}
 </script>
 <style>
 #components-layout-demo-fixed .logo {
@@ -39,5 +26,12 @@ export default {
 
 [data-theme='dark'] .site-layout .site-layout-background {
   background: #141414;
+}
+a{
+  color: #000 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+a.nuxt-link-active.nuxt-link-exact-active{
+  border-bottom: 1px solid #000;
 }
 </style>

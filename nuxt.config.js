@@ -35,10 +35,14 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['ant-design-vue/dist/antd.css', '@/assets/css/main.css'],
-
+  css: ['@/assets/css/main.css' ],
+  styleResources: {
+    scss: [
+      '~assets/sass/main.sass',
+    ]
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui'],
+  plugins: ['@/plugins/vuetify'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -46,7 +50,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    '@nuxtjs/vuetify',
+    // '@nuxtjs/eslint-module',
     '@nuxt/postcss8'
   ],
 
