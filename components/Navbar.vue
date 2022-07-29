@@ -1,12 +1,18 @@
 <template>
   <v-app-bar class="uppercase" app color="white">
-    <v-toolbar-title>Title</v-toolbar-title>
+    <v-toolbar-title class=" text-xs">Lorem</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
-    <nuxt-link class=" mr-4 font-bold text-black" :to="{ name: 'index' }">homepage</nuxt-link>
+    <nuxt-link class="mr-4 font-bold text-black" :to="{ name: 'index' }"
+      >homepage</nuxt-link
+    >
 
-    <nuxt-link class="font-bold text-black" :to="{ name: 'about' }">about us</nuxt-link>
+    <nuxt-link class="font-bold text-black" :to="{ name: 'about' }"
+      >about us</nuxt-link
+    >
+    <v-spacer></v-spacer>
+    <v-btn text> login </v-btn>
   </v-app-bar>
 </template>
 <script>
@@ -27,11 +33,11 @@ export default {}
 [data-theme='dark'] .site-layout .site-layout-background {
   background: #141414;
 }
-a{
+a {
   color: #000 !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-a.nuxt-link-active.nuxt-link-exact-active{
+a.nuxt-link-active.nuxt-link-exact-active {
   border-bottom: 1px solid #000;
 }
 </style>
