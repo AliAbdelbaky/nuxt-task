@@ -45,7 +45,7 @@
                   <v-col cols="12">
                     <v-chip
                       v-for="(chip, i) in chips"
-                      :key="chip"
+                      :key="i"
                       @click:close="removeChip(i)"
                       class="ma-2"
                       close
